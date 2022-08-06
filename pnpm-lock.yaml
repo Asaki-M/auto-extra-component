@@ -1,16 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/prompts': ^2.0.14
   esbuild: ^0.14.53
   husky: ^8.0.1
   lint-staged: ^13.0.3
+  prettier: ^2.7.1
   prompts: ^2.4.2
   zx: ^7.0.8
 
 devDependencies:
+  '@types/prompts': 2.0.14
   esbuild: 0.14.53
   husky: 8.0.1
   lint-staged: 13.0.3
+  prettier: 2.7.1
   prompts: 2.4.2
   zx: 7.0.8
 
@@ -58,6 +62,12 @@ packages:
 
   /@types/node/18.6.4:
     resolution: {integrity: sha512-I4BD3L+6AWiUobfxZ49DlU43gtI+FTHSv9pE2Zekg6KjMpre4ByusaljW3vYSLJrvQ1ck1hUaeVu8HVlY3vzHg==}
+    dev: true
+
+  /@types/prompts/2.0.14:
+    resolution: {integrity: sha512-HZBd99fKxRWpYCErtm2/yxUZv6/PBI9J7N4TNFffl5JbrYMHBwF25DjQGTW3b3jmXq+9P6/8fCIb2ee57BFfYA==}
+    dependencies:
+      '@types/node': 18.6.4
     dev: true
 
   /@types/ps-tree/1.1.2:
@@ -780,6 +790,12 @@ packages:
   /pidtree/0.6.0:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
 
