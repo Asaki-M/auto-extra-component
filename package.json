@@ -1,0 +1,17 @@
+{
+  "name": "auto-extra-component",
+  "version": "0.0.1",
+  "description": "Quickly extra component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "auto extra",
+    "cli",
+    "component",
+    "rebuild"
+  ],
+  "author": "Qinghuan",
+  "license": "MIT"
+}
