@@ -3,8 +3,16 @@
   "version": "0.0.1",
   "description": "Quickly extra component",
   "main": "index.js",
+  "type": "module",
+  "bin": {
+    "extra-component": "outfile.cjs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "zx ./scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asaki-M/auto-extra-component"
   },
   "keywords": [
     "auto extra",
@@ -12,6 +20,17 @@
     "component",
     "rebuild"
   ],
-  "author": "Qinghuan",
-  "license": "MIT"
+  "author": "Qinghuan <1041220793@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Asaki-M/auto-extra-component/issues"
+  },
+  "homepage": "https://github.com/Asaki-M/auto-extra-component#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.53",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prompts": "^2.4.2",
+    "zx": "^7.0.8"
+  }
 }
