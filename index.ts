@@ -1,31 +1,46 @@
 #!/usr/bin/env node
 
 import prompts from 'prompts'
+import fs from 'node:fs'
+import path from 'node:path'
+
+function getAliasFromConfig(configPath) {
+  fs.readFile(configPath, (err, data) => {
+    console.log(data)
+  })
+  return {}
+}
 
 async function init() {
-  let result: {
-    componentImportProject?: string
-    componentExportProject?: string
+  let inputPath: {
+    importProject?: string
+    exportProject?: string
+    exportComponentPath?: string
   } = {}
 
   try {
-    result = await prompts([
+    inputPath = await prompts([
       {
-        name: 'componentImportProject',
+        name: 'importProject',
         type: 'text',
-        message: 'The component entry path that needs to be imported: '
+        message: 'The project path where the components needs to be imported: '
       },
       {
-        name: 'componentExportProject',
+        name: 'exportProject',
         type: 'text',
-        message: 'The component export path that needs to be exported: '
+        message: 'The project config path where the components needs to be exported: '
+      },
+      {
+        name: 'exportComponentPath',
+        type: 'text',
+        message: 'The component path that needs to be exported: '
       }
     ])
+    const importAliasConfig = getAliasFromConfig(inputPath.importProject)
   } catch (cancelled) {
     console.log(cancelled.message)
     process.exit(1)
   }
-  console.log(result)
 }
 
 init().catch((e) => {
